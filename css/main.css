@@ -1,0 +1,159 @@
+/*Demo styles */
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+     /*Center slide text vertically */
+    /*display: -webkit-box;*/
+    /*display: -ms-flexbox;*/
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
+    /*-webkit-box-pack: center;*/
+    /*-ms-flex-pack: center;*/
+    /*-webkit-justify-content: center;*/
+    /*justify-content: center;*/
+    /*-webkit-box-align: center;*/
+    /*-ms-flex-align: center;*/
+    /*-webkit-align-items: center;*/
+    /*align-items: center;*/
+}
+/*第一屏*/
+.swiper-slide.one{
+    background: url(../img/onebg.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.swiper-slide.one .top{
+    width: 70%;
+    height: 50%;
+    border:2px solid #fff;
+    overflow: hidden;
+    margin:0 auto;
+    margin-top: 10%;
+}
+.swiper-slide.one .top img{
+    width: 100%;
+}
+.swiper-slide.one .center{
+    width: 70%;
+    height: 20%;
+    margin:0 auto;
+    position: relative;
+    margin-top: 5%;
+}
+.swiper-slide.one .center img{
+    position: absolute;
+}
+.swiper-slide.one .center img.ring{
+    width: 30%;
+    left: 7%;
+    top: 0;
+}
+.swiper-slide.one .center img.mary{
+    width: 100%;
+    left: 0;
+    top: 10%;
+}
+.swiper-slide.one .bottom{
+    width: 55%;
+    height: 10%;
+    margin:0 auto;
+    font-size: 10vw;
+    margin-top: 3%;
+    color: rgba(255,255,255,0.9);
+}
+.swiper-slide.one .bottom div{
+    float: left;
+}
+/*第二屏*/
+.swiper-slide.two{
+    background: url("../img/twobg.jpg");
+    background-size: 100% 100%;
+    position: relative;
+}
+.swiper-slide.two img{
+    width: 100%;
+}
+.swiper-slide.two .top{
+    width: 40%;
+    height: 25%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    overflow: hidden;
+}
+.swiper-slide.two .center{
+    width: 65%;
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    overflow: hidden;
+}
+.swiper-slide.two .bottom{
+    width: 40%;
+    height: 25%;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    overflow: hidden;
+}
+.swiper-button-next{
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    top:auto;
+    background-image: url("../img/jiezhi.png");
+    animation: run 1s linear infinite;
+}
+@keyframes run {
+    0%{bottom:1%;opacity:1}
+    100%{bottom:4%;opacity:0}
+}
+/*第三屏*/
+.swiper-slide.three div{
+    background: url("../img/three.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+/*音乐部分*/
+ #music{
+     width: 60px;
+     height: 60px;
+     position: fixed;
+     right: 10px;
+     top: 10px;
+     z-index: 9;
+ }
+#music .musicBg{
+    width: 60px;
+    height: 60px;
+}
+#music .musicImg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation:div1 2s linear infinite;
+}
+@keyframes div1{
+    0%{transform: rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
